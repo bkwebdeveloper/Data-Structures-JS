@@ -17,7 +17,7 @@ let Stack = function(){
 }
 
 Stack.prototype.push = function(value){
-    this.storage = this.storage.concat(value + '-');
+    this.storage = this.storage.concat(value, '-');
     this.size();
 }
 
@@ -25,7 +25,6 @@ Stack.prototype.pop = function() {
     if(this.size() === 0){
         print('Invalid operation. No item to pop')
     }
-
     let menus = this.storage.split('-');
     if(menus[menus.length - 1] === ''){
         menus.pop();
@@ -48,7 +47,7 @@ Stack.prototype.size = function(){
 
 let myWeeklyMenu = new Stack();
 
-/*
+
 myWeeklyMenu.push('ReadBeans');
 print(myWeeklyMenu.size());
 
@@ -83,4 +82,3 @@ print(myWeeklyMenu)
 
 myWeeklyMenu.pop();
 print(myWeeklyMenu.size());
-*/
