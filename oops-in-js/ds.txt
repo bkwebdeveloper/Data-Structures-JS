@@ -1,0 +1,9 @@
+What's data structure?
+
+Structuring data to fit different needs; 
+1. structuring data may include managing data for efficiency,
+2. 
+
+
+What's a class?
+A class is a blueprint that you want to construct objects from/using.
