@@ -48,6 +48,7 @@ Stack.prototype.size = function(){
 
 let myWeeklyMenu = new Stack();
 
+/*
 myWeeklyMenu.push('ReadBeans');
 print(myWeeklyMenu.size());
 
@@ -82,3 +83,4 @@ print(myWeeklyMenu)
 
 myWeeklyMenu.pop();
 print(myWeeklyMenu.size());
+*/
