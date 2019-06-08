@@ -38,14 +38,22 @@ function Stack(capacity){
 }
 
 Stack.prototype.push = function(value){
-    this._storage[this._size++] = value;
-    return this.size()
-}
+    if(this._size < this._capacity){
+        this._storage[this._size++] = value;
+        return this._size;
+    } else{
+        return 'Max capacity already reached. Remove element before adding one.';
+    }
+};
 
 Stack.prototype.pop = function() {
+    let value = this._storage[--this._size]
     // delete the last object 
-    delete this._storage[this._size - 1];
-    this._size--;
+    delete this._storage[this._size];
+    if(this._size <= 0){
+        return this._size = 0;
+    }
+    return value;
 }
 
 Stack.prototype.peek = function() {
@@ -56,20 +64,14 @@ Stack.prototype.size = function(){
     return this._size; 
 }
 
-let myWeeklyMenu = new Stack(10);
+let myWeeklyMenu = new Stack(3);
 
-/*
-myWeeklyMenu.push('ReadBeans');
-print(myWeeklyMenu.size());
 
-myWeeklyMenu.push('hello');
-print(myWeeklyMenu.size());
+print(myWeeklyMenu.push('ReadBeans'));
+print(myWeeklyMenu.push('hello'));
+print(myWeeklyMenu.push('there'));
+print(myWeeklyMenu.push('JavaScript'));
 
-myWeeklyMenu.push('there');
-print(myWeeklyMenu.size());
-
-myWeeklyMenu.push('JavaScript');
-print(myWeeklyMenu.size());
 
 print(myWeeklyMenu)
 
@@ -78,9 +80,7 @@ print(myWeeklyMenu.size());
 
 myWeeklyMenu.pop();
 print(myWeeklyMenu.size());
-
 
 
 print(myWeeklyMenu)
 print(myWeeklyMenu.peek());
-*/
