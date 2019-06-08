@@ -37,6 +37,7 @@ function Stack(capacity){
     this._size = 0;
 }
 
+// O(1)
 Stack.prototype.push = function(value){
     if(this._size < this._capacity){
         this._storage[this._size++] = value;
@@ -46,6 +47,7 @@ Stack.prototype.push = function(value){
     }
 };
 
+// O(1)
 Stack.prototype.pop = function() {
     let value = this._storage[--this._size]
     // delete the last object 
