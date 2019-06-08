@@ -22,6 +22,7 @@ function Queue(capacity){
     this._tracker = 0;
 }
 
+// O(1)
 Queue.prototype.enqueue = function(value) {
     if(this._size < this._capacity){
         this._container[this._size++] = value;
@@ -30,6 +31,7 @@ Queue.prototype.enqueue = function(value) {
     return 'Max limit has reached. Please dequeuing items before adding new.'
 }
 
+// O(1)
 Queue.prototype.dequeue = function() {
     let value = this._container[this._tracker];
     if(this._size > 0){
@@ -40,6 +42,7 @@ Queue.prototype.dequeue = function() {
     return 'No item has left to be dequeued';
 }
 
+// O(1)
 Queue.prototype.peek = function() {
     if(this._size > 0){
         return this._container[this._tracker];
@@ -47,6 +50,7 @@ Queue.prototype.peek = function() {
     return "No item has in the queue";
 }
 
+// O(1)
 Queue.prototype.size = function() {
     return this._size;
 }
