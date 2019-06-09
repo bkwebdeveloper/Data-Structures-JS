@@ -37,8 +37,7 @@ function recursiveMultiplier(arr, num){
         if(arr.length === 0){
             return 1;
         }
-        let item = arr.shift();
-        newArr.push(num * item);
+        newArr.push(num * arr.shift());
         return multiplier(arr, num);
     }
     multiplier(arr, num);
@@ -56,8 +55,7 @@ function recursiveReverse(arr){
         if(arr.length === 0){
             return '';
         }
-        let item = arr.pop();
-        reversedArray.push(item)
+        reversedArray.push(arr.pop())
         return reverse(arr)
     }
     reverse(arr)
