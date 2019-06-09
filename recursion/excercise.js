@@ -51,17 +51,17 @@ p(recursiveMultiplier([1,2,3,4], 2));
 
 //4. Write a function 'recursiveReverse' that takes an array and uses recursion to return its contents in reverse
 function recursiveReverse(arr){
-    let newArr = [];
+    let reversedArray = [];
     function reverse(arr){
         if(arr.length === 0){
             return '';
         }
         let item = arr.pop();
-        newArr.push(item)
+        reversedArray.push(item)
         return reverse(arr)
     }
     reverse(arr)
-    return newArr;
+    return reversedArray;
 }
 
 p(recursiveReverse([1,2,3,4,5]));
